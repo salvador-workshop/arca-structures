@@ -1,6 +1,6 @@
 {
   "name": "arca-structures",
-  "version": "0.0.1",
+  "version": "0.1.1-alpha.0",
   "description": "Salvador Workshop's Code-CAD tools for creating models of various structures.",
   "workspaces": [
     "packages/*"
