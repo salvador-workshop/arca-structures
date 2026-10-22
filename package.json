@@ -1,0 +1,36 @@
+{
+  "name": "arca-structures",
+  "version": "0.0.1",
+  "description": "Salvador Workshop's Code-CAD tools for creating models of various structures.",
+  "workspaces": [
+    "packages/*"
+  ],
+  "main": "src/index.js",
+  "scripts": {
+    "docs": "jsdoc packages -r -d docs -c jsdoc.json --readme readme.md",
+    "jscad": "node src/build-jscad.js",
+    "jscad-batch": "node src/build-jscad-batch.js",
+    "transform-opt": "node src/build-transform-opt.js",
+    "moulds": "node src/build-moulds.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+hhttps://github.com/salvador-workshop/arca-structures.git"
+  },
+  "devDependencies": {
+    "@jscad/cli": "^2.3.8",
+    "jsdoc": "^4.0.4"
+  },
+  "keywords": [
+    "jscad",
+    "cad",
+    "3d"
+  ],
+  "author": "RJ Salvador (Salvador Workshop)",
+  "license": "ISC",
+  "bugs": {
+    "url": "hhttps://github.com/salvador-workshop/arca-structures/issues"
+  },
+  "homepage": "hhttps://github.com/salvador-workshop/arca-structures"
+}
