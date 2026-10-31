@@ -1,5 +1,7 @@
 "use strict"
 
+const wallModule = require('./wall.js')
+
 /**
  * ...
  * @namespace wallEntryway
@@ -19,12 +21,10 @@ const entrywayBuilder = ({ jscad, swcadJs }) => {
     } = swcadJs.models
 
     const {
-        wall,
-    } = swcadJs.models.structure
-
-    const {
         arch: arch2d,
     } = swcadJs.profiles.structure
+
+    const wall = wallModule.init({ jscad, swcadJs })
 
     return {
         /**

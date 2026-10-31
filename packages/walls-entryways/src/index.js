@@ -1,24 +1,15 @@
 "use strict"
 
-const wallModule = require('./wall')
-const wallEntrywayModule = require('./wall-entryway')
+const wallModule = require('./wall.js')
+const wallEntrywayModule = require('./wall-entryway.js')
 
 const wallsEntrywaysInit = ({ jscad, swcadJs }) => {
-    const wall = wallModule.init({ jscad, swcadJs })
-
-    const preLib = {
-        ...swcadJs
-    }
-    preLib.models.structure = {
-        wall
-    }
-
-    const structure = {
+    const wallsEntryways = {
         wall: wallModule.init({ jscad, swcadJs }),
         wallEntryway: wallEntrywayModule.init({ jscad, swcadJs }),
     }
 
-    return structure
+    return wallsEntryways
 }
 
 module.exports = {
