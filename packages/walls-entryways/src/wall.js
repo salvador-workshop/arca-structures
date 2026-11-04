@@ -1,5 +1,7 @@
 "use strict"
 
+const mouldingModule = require('./moulding.js')
+
 /**
  * ...
  * @namespace wall
@@ -13,9 +15,10 @@ const wallBuilder = ({ jscad, swcadJs }) => {
     const { measureDimensions } = jscad.measurements;
 
     const { position } = swcadJs.calcs
-    const { moulding } = swcadJs.components
     const { trim } = swcadJs.profiles
     const { PHI_INV } = swcadJs.data.constants
+
+    const moulding = mouldingModule.init({ jscad, swcadJs })
 
     const crownTrim = ({ totalThickness, totalLength, trimProfile }) => {
         const profileDims = measureDimensions(trimProfile);
